@@ -290,6 +290,7 @@
 		94E1B8F918D0F61F003ACCFF /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D120F61711312600E868A8 /* OpenEmuBase.framework */; };
 		94E1B93E18D0F6A9003ACCFF /* osal_dynamiclib_unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 94E1B90518D0F6A9003ACCFF /* osal_dynamiclib_unix.c */; };
 		94E1B94418D0F707003ACCFF /* mupen64plus-rsp-cxd4.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94E1B8FD18D0F61F003ACCFF /* mupen64plus-rsp-cxd4.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C2FE51EA2AED9183007823A8 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2FE51E92AED917C007823A8 /* libpng.a */; };
 		C62301A9171227B900576081 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D120F61711312600E868A8 /* OpenEmuBase.framework */; };
 		C6D120F71711312600E868A8 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D120F61711312600E868A8 /* OpenEmuBase.framework */; };
 		EE2BBC40225AD5050007BF6F /* libhardware.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE2BBC35225AD5040007BF6F /* libhardware.cpp */; };
@@ -1144,6 +1145,7 @@
 		94E6B871166C2A0A00082F27 /* RELEASE */ = {isa = PBXFileReference; lastKnownFileType = text; path = RELEASE; sourceTree = "<group>"; };
 		94E6B875166C2A0A00082F27 /* jpeg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = jpeg.c; sourceTree = "<group>"; };
 		94E6B877166C2A0A00082F27 /* rsp_api_export.ver */ = {isa = PBXFileReference; lastKnownFileType = text; path = rsp_api_export.ver; sourceTree = "<group>"; };
+		C2FE51E92AED917C007823A8 /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng.a; path = ../../../../../../opt/homebrew/Cellar/libpng/1.6.40/lib/libpng.a; sourceTree = "<group>"; };
 		C6D120F61711312600E868A8 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EE2BBC34225AD5040007BF6F /* GraphicBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicBuffer.h; sourceTree = "<group>"; };
@@ -1169,6 +1171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FE51EA2AED9183007823A8 /* libpng.a in Frameworks */,
 				8755038E1E74C51D002222F3 /* libz.dylib in Frameworks */,
 				8755038F1E74C51D002222F3 /* OpenGL.framework in Frameworks */,
 				875503901E74C51D002222F3 /* libpng.a in Frameworks */,
@@ -1218,6 +1221,7 @@
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
+				C2FE51E82AED917C007823A8 /* Frameworks */,
 			);
 			name = Mupen64Plus;
 			sourceTree = "<group>";
@@ -2862,6 +2866,14 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		C2FE51E82AED917C007823A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2FE51E92AED917C007823A8 /* libpng.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE2BBC32225AD5040007BF6F /* GraphicBuffer */ = {
 			isa = PBXGroup;
 			children = (
@@ -3487,6 +3499,7 @@
 		1DEB913F08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -3514,16 +3527,23 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
 		1DEB914008733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -3551,9 +3571,15 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				SDKROOT = macosx;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
@@ -3661,7 +3687,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/png\"",
-					"$(PROJECT_DIR)/GLideN64/src/GLideNHQ/lib",
+					/opt/homebrew/Cellar/libpng/1.6.40/lib,
 				);
 				MACH_O_TYPE = mh_bundle;
 				OTHER_CFLAGS = (
@@ -3709,7 +3735,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/png\"",
-					"$(PROJECT_DIR)/GLideN64/src/GLideNHQ/lib",
+					/opt/homebrew/Cellar/libpng/1.6.40/lib,
 				);
 				MACH_O_TYPE = mh_bundle;
 				OTHER_CFLAGS = (
