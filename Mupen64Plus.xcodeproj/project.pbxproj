@@ -267,7 +267,6 @@
 		87FB3C19214DED1800A221BE /* glsl_FXAA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87FB3C06214DCFB000A221BE /* glsl_FXAA.cpp */; };
 		87FB3C1A214DF41700A221BE /* FrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E82BC6C1F507D6D0081AF7B /* FrameBuffer.cpp */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
-		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		942130D01793DD8F00E57482 /* alist.c in Sources */ = {isa = PBXBuildFile; fileRef = 942130CB1793DD8F00E57482 /* alist.c */; };
 		942130D11793DD8F00E57482 /* cicx105.c in Sources */ = {isa = PBXBuildFile; fileRef = 942130CD1793DD8F00E57482 /* cicx105.c */; };
 		948711A01A6B57FB008CDA87 /* module.c in Sources */ = {isa = PBXBuildFile; fileRef = 9487119D1A6B57FB008CDA87 /* module.c */; };
@@ -1194,7 +1193,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				3D208E981182550400BEAA42 /* OpenGL.framework in Frameworks */,
 				551FEEB025B64D9000B9030D /* linkage.o in Frameworks */,
 				C6D120F71711312600E868A8 /* OpenEmuBase.framework in Frameworks */,
